@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Counter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="my-3">Counter</h1>    
+        <p>{{(session["actual_visits"])}} organic visits</p>
+        <p>{{(session["added_visits"])}} added visits</p>
+        <p>{{(session["total_visits"])}} total visits</p>
+    </div>
+    <div class="text-center">
+    <button type="button" onclick="window.location.href='http://localhost:5000/add_two';">+2</button>
+    <button type="button" onclick="window.location.href='http://localhost:5000/destroy_session';">Reset</button>
+    <form class="my-4", action='/add_custom', method='post'>
+        <input type='text' name='number'>        
+        <button type="submit">Add page vists</button>
+    </form>
+    </div>
+    </body>
+</html>
